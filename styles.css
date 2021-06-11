@@ -1,0 +1,45 @@
+h1 {
+  color: green;
+}
+
+#campo_minado {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-gap: 5px;
+}
+
+#campo_minado div {
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(0,0,0,  0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  pointer-events: all;
+
+}
+
+.estorou {
+  color: transparent;
+  position: relative;
+  pointer-events: none;
+  cursor: none;
+}
+.acertou {
+  color: transparent;
+  position: relative;
+  pointer-events: none;
+  cursor: none;
+}
+
+.estorou::before {
+  content: '💣';
+  color: black;
+}
+.acertou::before {
+  content: '✅';
+  color: black;
+}

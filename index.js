@@ -55,7 +55,7 @@ class MineField {
   findMine(e, index) {
     if (this.endGame) return;
 
-    const isMine = this.isMineArray[index];
+    const isNotMine = this.isMineArray[index];
 
     const boardItemElement = e.toElement;
 
@@ -63,7 +63,7 @@ class MineField {
 
     this.clickedItem.push(index);
 
-    if (isMine) return this.avoidedBomb(boardItemElement);
+    if (isNotMine) return this.avoidedBomb(boardItemElement);
 
     this.blownBomb(boardItemElement);
   }
